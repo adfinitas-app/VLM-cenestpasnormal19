@@ -1,0 +1,709 @@
+/* {
+	background: #000 !important;
+	color: #0f0 !important;
+	outline: solid #f00 1px !important;
+	}*/
+
+.iti-flag {background-image: url("../img/flags.png");}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+	.iti-flag {background-image: url("../img/flags@2x.png");}
+}
+
+@font-face {
+	font-family: 'Museo Sans 300';
+	src: url('../fonts/museo300-regular-webfont.woff2') format('woff2'),
+	url('../fonts/museo300-regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Museo Sans';
+	src: url('../fonts/museo500-regular-webfont.woff2') format('woff2'),
+	url('../fonts/museo500-regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Museo Sans 700';
+	src: url('../fonts/museo700-regular-webfont.woff2') format('woff2'),
+	url('../fonts/museo700-regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Museo Sans 900';
+	src: url('../fonts/museo_900-webfont.woff2') format('woff2'),
+	url('../fonts/museo_900-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+.intl-tel-input {
+	width: 100%;
+	margin: 0 0 1rem;
+}
+p, a, h1, h2, h3, h4, h5, h6, button {
+	font-family: Arial, serif;
+}
+.max-width {
+	max-width: 75rem !important;
+	margin: 0 auto;
+}
+.bold {
+	font-weight: bold !important;
+}
+.full-height {
+	height: 100%;
+}
+.flex {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+}
+.no-padding {
+	padding: 0;
+}
+.relative {
+	position: relative;
+	width: 100%;
+}
+.yellow {
+	color: #efcd61;
+}
+.fullWidth {
+	width: 100%;
+}
+
+#global-container {
+	max-width: 100%;
+}
+
+#body {
+	height: 2300px;
+	padding-top: 120px;
+	background-image: url("https://heroku-adfinitas-campaign.s3.amazonaws.com/VLM-2019/19-plaidoyer-CRCM/bg-degrade.jpg");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	position: relative;
+}
+
+#body .logo {
+	position: absolute;
+	left: 15px;
+	top: 15px;
+}
+
+#tag1 {
+	position: absolute;
+	right: -15px;
+	top: 40%;
+}
+#tag2 {
+	position: absolute;
+	right: 0;
+	bottom: 5%;
+}
+
+.box {
+	position: relative;
+	z-index: 10;
+}
+.box img {
+	z-index: 10;
+	position: relative;
+}
+.trait {
+	position: absolute;
+	z-index: 1 !important;
+}
+.trait img {
+	z-index: 1 !important;
+
+}
+#photo-sasha {
+	position: relative;
+}
+#box-1 {
+	min-height: 300px;
+}
+#box-1 h1 {
+	color: #efcd61;
+	font-size: 25px;
+	line-height: 1.2;
+	font-family: 'Museo Sans 900', serif;
+	font-weight: bold;
+	padding-top: 60px;
+}
+#box-1 h1 span.white {
+	color: white;
+}
+#box-1 h1 span.big {
+	font-size: 31px;
+}
+#box-1 h1 span.uppercase {
+	text-transform: uppercase;
+}
+
+#trait-1 {
+	left: 25%;
+	top: 110px
+}
+#trait-2 {
+	left: -130px;
+	top: -150px
+}
+#trait-3 {
+	left: 260px;
+	top: -70px
+}
+#trait-3 {
+	left: 260px;
+	top: -70px
+}
+#trait-4 {
+	left: 200px;
+	top: 35px
+}
+#trait-5 {
+	left: 360px;
+	top: -50px;
+}
+
+#box-2 {
+	position: absolute;
+	left: 50%;
+	top: 330px;
+}
+
+#box-3 {
+	position: absolute;
+	left: -400px;
+	top: 125px;
+
+
+}
+#box-3 .inner {
+	background-color: white;
+	padding: 30px;
+	border-radius: 15px;
+}
+#box-3 .inner.first {
+	width: 435px;
+}
+
+#box-3 p {
+	margin-bottom: 0;
+	color: black;
+	font-size: 20px;
+	line-height: 1.2;
+	font-family: 'Museo Sans 300', serif;
+}
+#box-3 p span.bold {
+	font-family: 'Museo Sans 900', serif;
+
+}
+
+#box-4 {
+	position: absolute;
+	left: 305px;
+	top: 95px;
+	width: 400px;
+	max-width: 100%;
+	text-align: center;
+}
+#box-4 p {
+	margin-bottom: 0;
+	color: white;
+	font-size: 25px;
+	line-height: 1.2;
+	font-family: 'Museo Sans 500', serif;
+}
+#box-4 h3 {
+	margin-bottom: 0;
+	color: #efcd61;
+	font-size: 40px;
+	line-height: 1.2;
+	font-family: 'Museo Sans 900', serif;
+}
+#box-5 {
+	left: -300px;
+	top: 120px;
+	text-align: left;
+	font-family: 'Museo Sans 500', serif;
+}
+#box-5 .bold {
+	font-family: 'Museo Sans 900', serif !important;
+}
+#box-5 .inner.second {
+	width: 730px;
+}
+#box-5 h6 {
+	font-size: 40px;
+}
+#box-5 .title {
+	color: black;
+	font-size: 20px;
+	font-family: 'Museo Sans 900', serif;
+	line-height: 1;
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+#box-5 .title * {
+	vertical-align: middle;
+}
+#box-5 ul {
+	list-style: none;
+}
+#box-5 li:before {
+	content: '- ';
+}
+#box-5 li {
+	font-size: 20px;
+
+}
+
+
+#box-6 {
+	position: absolute;
+	left: 0;
+	top: 95px;
+	width: 730px;
+	text-align: left;
+}
+#box-6 p {
+	margin-bottom: 0;
+	color: white;
+	font-size: 24px;
+	line-height: 1.2;
+	font-family: 'Museo Sans 900', serif;
+}
+
+#arrow-container {
+	text-align: center;
+	display: block;
+	position: absolute;
+	width: 100%;
+	top: 50px;
+	left: 0;
+
+	-webkit-transition: all 0.5s, color 0.5s ease, border-color 5s ease;
+	-moz-transition: all 0.5s, color 0.5s ease, border-color 5s ease;
+	-ms-transition: all 0.5s, color 0.5s ease, border-color 5s ease;
+	-o-transition: all 0.5s, color 0.5s ease, border-color 5s ease;
+	transition: all 0.5s, color 0.5s ease, border-color 5s ease;
+}
+#arrow-container:hover {
+	transform: scale(1.05);
+}
+#arrow-container p {
+	font-family: 'Museo Sans 300', serif;
+	color: white;
+	font-size: 18px;
+	margin-bottom: 0;
+	margin-top: 25px;
+
+}
+
+
+.petition {
+	padding: 50px 100px;
+	font-family: 'Museo Sans 500', serif;
+	font-size: 18px;
+	color: black;
+	line-height: 1.2;
+}
+.petition div:nth-child(1) {
+	height: 250px;
+}
+.petition ul {
+	list-style: none;
+	margin-bottom: 35px;
+}
+.petition li:before {
+	content: '- ';
+}
+.petition .receiver {
+	float: right;
+}
+.petition .green {
+	color: #008e7f;
+}
+.petition .big {
+	font-family: 'Museo Sans 900', serif;
+	font-size: 26px;
+	font-style: italic;
+	line-height: 1;
+	margin-bottom: 40px;
+}
+.petition .bold {
+	font-family: 'Museo Sans 900', serif;
+}
+.petition .title {
+	color: black;
+	font-size: 20px;
+	font-family: 'Museo Sans 900', serif;
+	line-height: 1;
+	margin-top: 15px;
+	margin-bottom: 25px;
+}
+.petition .title.green {
+	color: #008e7f !important;
+}
+.petition .title * {
+	vertical-align: middle;
+}
+
+
+
+
+
+
+
+.container-right {
+	background-color: #00738a;
+	position: relative;
+	padding: 0;
+	text-align: center;
+	padding-top: 30px;
+}
+.container-form {
+	position: fixed;
+	padding-top: 20px;
+	top: 0;
+}
+.container-form .title {
+	width: 100%;
+	text-align: center;
+	height: 65px;
+	background-image: url("https://heroku-adfinitas-campaign.s3.amazonaws.com/VLM-2019/19-plaidoyer-CRCM/bg-button.jpg");
+	background-size: cover;
+}
+.container-form .title p {
+	margin-top: 40px;
+	color: #00738a;
+	font-size: 23px;
+	line-height: 1.2;
+	margin-bottom: 0;
+	font-family: 'Museo Sans 900', serif;
+	padding-top: 18px;
+}
+#nb-sign {
+	text-align: center;
+	color: #efcd61;
+	font-size: 20px;
+	line-height: 1.2;
+	margin-bottom: 20px;
+	font-family: 'Museo Sans 900', serif;
+}
+.container-form .text p {
+	color: white;
+	font-family: 'Museo Sans 300', serif;
+	font-size: 15px;
+	line-height: 1.2;
+}
+.container-form .text p.white {
+	color: white;
+	font-family: 'Museo Sans 900', serif;
+	font-size: 15px;
+	line-height: 1.2;
+}
+.container-form .legal p {
+	color: white;
+	font-family: 'Museo Sans 300', serif;
+	font-size: 12px;
+	line-height: 1.2;
+}
+.container-form .legal p a {
+	color: #efcd61;
+}
+.container-form .inner {
+	padding: 20px 30px;
+	text-align: left;
+}
+.container-form form {
+	border-bottom: 1px solid white;
+	padding-bottom: 30px;
+	margin-bottom: 20px;
+}
+.container-form form .group div:nth-child(1) {
+	width: 49%;
+	float: left;
+	display: inline-block;
+	vertical-align: top;
+}
+.container-form form .group div:nth-child(2) {
+	width: 49%;
+	float: right;
+	display: inline-block;
+	vertical-align: top;
+}
+.container-form form input {
+	border-radius: 5px;
+	font-family: 'Museo Sans 300', serif;
+}
+.container-form form .group input:nth-child(2) {
+	margin-left: 10px;
+}
+.container-form form button {
+	width: 275px;
+	max-width: 100%;
+	background-image: url("https://heroku-adfinitas-campaign.s3.amazonaws.com/VLM-2019/19-plaidoyer-CRCM/bg-button.jpg");
+	background-size: cover;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	height: 65px;
+	color: #00738a;
+	font-size: 18px;
+	line-height: 1.2;
+	font-family: 'Museo Sans 900', serif;
+	text-transform: uppercase;
+	border-radius: 3px;
+
+	-webkit-box-shadow: 0px 0px 17px -7px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 17px -7px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 17px -7px rgba(0,0,0,0.75);
+
+	-webkit-transition: all 0.5s, color 0.5s ease, border-color 5s ease;
+	-moz-transition: all 0.5s, color 0.5s ease, border-color 5s ease;
+	-ms-transition: all 0.5s, color 0.5s ease, border-color 5s ease;
+	-o-transition: all 0.5s, color 0.5s ease, border-color 5s ease;
+	transition: all 0.5s, color 0.5s ease, border-color 5s ease;
+}
+.container-form form button:hover {
+	transform: scale(1.05);
+}
+.container-form form p {
+	color: white;
+	font-family: 'Museo Sans 300', serif;
+	font-size: 14px;
+	line-height: 1.2;
+	margin-left: 8px;
+}
+@media screen and (max-height: 830px) {
+	.container-form {
+		bottom: 0;
+		overflow-y: scroll;
+	}
+}
+@media screen and (max-width: 1010px) {
+	.container-deploy-form {
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 20;
+		height: 65px;
+		background-color: white;
+		padding: 10px;
+	}
+	#deploy-form-small {
+		background-image: url("https://heroku-adfinitas-campaign.s3.amazonaws.com/VLM-2019/19-plaidoyer-CRCM/bg-button.jpg");
+		background-size: cover;
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+		color: #00738a;
+		height: 100%;
+		width: 100%;
+		font-size: 22px;
+		padding-top: 10px;
+		line-height: 1.2;
+		font-family: 'Museo Sans 900', serif;
+		text-transform: uppercase;
+	}
+	#closeForm {
+		display: none;
+		position: fixed;
+		z-index: 21;
+		right: 10px;
+		top: 10px;
+
+		color: #efcd61;
+		font-size: 42px;
+		line-height: 1.2;
+		font-family: 'Museo Sans 900', serif;
+	}
+	.container-form {
+		position: fixed;
+		background-color: #00738a;
+		z-index: 20;
+		bottom: 0;
+		top: -100%;
+		height: 100vh;
+		left: 0;
+		right: 0;
+	}
+	.relative {
+		width: 100%;
+	}
+	#body {
+		height: 2800px;
+		padding-top: 40px;
+	}
+
+	#tag1 {
+		right: 0;
+		top: 35%;
+	}
+	#tag2 {
+		bottom: 0;
+	}
+	#trait-1 {
+		left: 50%;
+		top: 20px;
+	}
+	#trait-2 {
+		left: 50%;
+		top: -25px;
+	}
+	#trait-3 {
+		left: 50%;
+		top: -150px;
+	}
+	#trait-4, #trait-5 {
+		left: 50%;
+	}
+
+
+	#box-1 h1,
+	#box-1 h1 span.big {
+		padding-top: 30px;
+		text-align: center;
+		font-size: 32px;
+	}
+
+	#box-2 {
+		width: 100%;
+		left: 0;
+		top: 140px;
+		text-align: center;
+	}
+
+	#box-3 {
+		top: 180px;
+		left: 0;
+		width: 100%;
+	}
+	#box-3 .inner.first {
+		text-align: center;
+		font-size: 20px;
+		padding: 40px;
+		margin-left: auto;
+		max-width: 100%;
+		margin-right: auto;
+	}
+	#box-4 {
+		top: 200px;
+		left: 0;
+		width: 100%;
+		text-align: center;
+	}
+	#box-4 h3 {
+		text-transform: uppercase;
+	}
+	#box-4 p {
+		font-size: 22px;
+	}
+
+	#box-5 {
+		left: 0;
+
+	}
+	#box-5 .inner.second {
+		width: 100%;
+		border-radius: 0;
+	}
+
+	#box-6 {
+		width: 100%;
+		text-align: center;
+	}
+	#box-6 p {
+		font-size: 24px !important;
+	}
+
+
+}
+@media screen and (max-width: 640px) {
+	#body {
+		height: 2980px;
+		padding-top: 70px;
+	}
+	#tag2 {
+		bottom: 40px;
+	}
+	#photo-sasha {
+		max-width: 225px;
+	}
+	.trait {
+		z-index: -1 !important;
+	}
+	#box-1 h1, #box-1 h1 span.big {
+		padding-top: 15px;
+	}
+	#box-2 {
+		top: 50px	;
+	}
+	#box-2 > img {
+		max-width: 80%;
+	}
+	#box-3 {
+		top: 80px;
+	}
+	#box-3 .inner.first {
+		border-radius: 0;
+	}
+	#box-4 {
+		top: 130px;
+	}
+	#box-5 .inner.second {
+		padding: 20px;
+	}
+	#box-5 .inner.second img {
+		float: left;
+		margin-top: 5px;
+		margin-right: 5px;
+		margin-bottom: 50px;
+		vertical-align: middle;
+	}
+	#box-5 .title {
+		margin-top: 0;
+	}
+	#box-5 .title img {
+		display: inline-block;
+		float: left;
+
+	}
+	#box-5 li {
+		font-size: 18px;
+	}
+	#trait-3 {
+		top: -220px;
+	}
+
+	.petition {
+		padding: 10px;
+	}
+
+
+	.container-form .title p {
+		font-size: 20px;
+		padding-top: 20px;
+	}
+	.container-form .text {
+		text-align: center;
+	}
+	.container-form form .group div {
+		width: 100% !important;
+	}
+	.container-form form input {
+		margin-bottom: 8px;
+	}
+}
