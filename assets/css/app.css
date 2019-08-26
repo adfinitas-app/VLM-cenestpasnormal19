@@ -368,6 +368,7 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 	background-size: cover;
 	background-position: 50% 100%;
 	position: relative;
+	display: none;
 }
 #merci .container-virades {
 	position: absolute;
