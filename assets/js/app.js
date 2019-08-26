@@ -1,3 +1,5 @@
+var merci = false;
+
 $(document).foundation();
 $(document).ready(function() {
     $("#f_phone").intlTelInput({
@@ -7,11 +9,13 @@ $(document).ready(function() {
 
     fillFieldsFromUrl()
 
-    if ($(window).width() > 1010) {
+    if ($(window).width() > 1010 && !merci) {
         $('.container-right').height(
             $('#body').height() + $('#petition').height() + 220
         )
     }
+
+    preload(["https://heroku-adfinitas-campaign.s3.amazonaws.com/VLM-2019/19-plaidoyer-CRCM/merci.jpg"])
 
 });
 
@@ -19,7 +23,7 @@ $(window)
     .scroll( function() {
     })
     .resize( function () {
-        if ($(window).width() > 1010) {
+        if ($(window).width() > 1010 && !merci) {
             $('.container-right').height(
                 $('#body').height() + $('#petition').height() + 220
             )
@@ -49,72 +53,72 @@ $('#closeForm').click( function (e) {
 });
 
 
-$('.form').submit( function (e) {
+$('form').submit( function (e) {
     e.preventDefault();
-    if (validateForm($(this))) {
-        sendEmail($(this));
+    if (validateForm()) {
+        $('.container-right').css({'min-height':'100vh', 'height':'auto','padding-bottom':'270px'});
+        $('.container-form').fadeOut('slow', function () {
 
+        })
+        $('.container-left').addClass('medium-7')
+        $('.container-right').addClass('medium-5')
+        $('#merci .container-footer').fadeIn('slow', function () {
 
-        if ($(window).width() > 1024) {
-            $('#popin-contact .bottom').slideUp('slow');
-            $('.popin-contact-success').slideDown('slow');
-            $('#close').fadeOut();
-        }
-        else {
-            $('.notification').slideDown('slow', function () {
-                setTimeout(function() {
-                    $('.notification').slideUp('slow');
-                }, 4000);
-
-            });
-        }
-
-
-
+        })
+        $('.container-deploy-form').fadeOut('slow', function () {
+        });
+        $('.container-merci').fadeIn('slow', function () {
+            $('#merci .container-virades').css('bottom', '40px')
+        })
+        $('.petition').slideUp(function () {
+            $(this).hide()
+        })
+        $('#body').slideUp(function () {
+            $(this).hide()
+        })
+        $('#merci').slideDown()
     }
+
+
 });
 
-function validateForm(el) {
-    var inputs = el.find('input');
-
+function validateForm() {
     var check = true;
+    var el = $('form');
 
 
-    $('.civility *').css('color', "#727271");
-    $('.error-civility').hide();
-    $('.error-phone-wrong').hide();
-    $('.error-birthdate-wrong').hide();
+    $('.error').hide();
     el.find('input').each( function() {
         $(this).removeClass('red-border');
     });
 
     var phone = el.find('input[name=f_phone]');
-    var birthdate = el.find('input[name=f_birthdate]');
-    var civilityValMale = el.find('input[name=f_civility_male]').is(":checked");
-    var civilityValFemale = el.find('input[name=f_civility_female]').is(":checked");
-    var civilityValFemaleMale = el.find('input[name=f_civility_femaleMale]').is(":checked");
+    var firstname = el.find('input[name=f_firstname]');
+    var lastname = el.find('input[name=f_lastname]');
+    var email = el.find('input[name=f_email]');
 
 
     if (phone.val() !== "") {
         if (!phone.intlTelInput("isValidNumber")) {
-            $('.error-phone-wrong').show();
+            $('.wrong-phone').show();
             phone.addClass('red-border');
             check = false;
         }
     }
-
-    if (birthdate.val() !== "") {
-        if (!validateBirthdate(birthdate.val())) {
-            $('.error-birthdate-wrong').show();
-            birthdate.addClass('red-border');
-            check = false;
-        }
+    if (!validateEmail(email.val())) {
+        $('.wrong-email').show();
+        email.addClass('red-border');
+        check = false;
     }
 
-    if (!civilityValFemaleMale && !civilityValMale && !civilityValFemale) {
-        $('.error-civility').show();
-
-        $('.civility *').css('color', "red");
+    if (firstname.val() === "") {
+        $('.required-firstname').show();
+        firstname.addClass('red-border');
+        check = false;
+    }
+    if (lastname.val() === "") {
+        $('.required-lastname').show();
+        lastname.addClass('red-border');
         check = false;
     }
 
@@ -128,12 +132,6 @@ function validateForm(el) {
 function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
-}
-
-function validateBirthdate(date) {
-    var re = /^(0[1-9]|1\d|2\d|3[01])\/(0[1-9]|1[0-2])\/(19|20)\d{2}$/ ;
-
-    return re.test(date);
 }
 
 function extractUrlParams(){

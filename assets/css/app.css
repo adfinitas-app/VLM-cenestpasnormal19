@@ -362,9 +362,97 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 
 
 
+#merci {
+	min-height: 100vh;
+	background-image: url("https://heroku-adfinitas-campaign.s3.amazonaws.com/VLM-2019/19-plaidoyer-CRCM/merci.jpg");
+	background-size: cover;
+	background-position: 50% 100%;
+	position: relative;
+}
+#merci .container-virades {
+	position: absolute;
+	bottom: 40px;
+	left: 0;
+	right: 0;
+	min-height: 215px;
+	background-color: #eaebed;
+}
+#merci .container-virades .inner {
+	overflow-x: hidden;
+	padding-top: 30px;
+	width: 100%;
+	min-height: 215px;
+	height: 100%;
+	position: relative;
+}
+#merci .container-virades .inner .baloon1 {
+	position: absolute;
+	left: -30px;
+	bottom: 0;
+}
+#merci .container-virades .inner .baloon2 {
+	position: absolute;
+	left: 28%;
+	top: 10px;
+}
+#merci .container-virades .inner .baloon3 {
+	position: absolute;
+	right: -25px;
+	bottom: 20px;
+}
+#merci .container-virades .inner .text p.big {
+	text-align: center;
+	background-color: #008b80;
+	text-transform: uppercase;
+	padding: 5px 10px;
+	color: white;
+	font-size: 27px;
+	font-family: 'Museo Sans 900', serif;
+}
+#merci .container-virades .inner .text p {
+	text-align: left;
+	color: black;
+	font-size: 18px;
+	font-family: Helvetica, serif;
+}
+.container-merci {
+	display: none;
 
-
-
+}
+.container-merci .bt-social {
+	display: block;
+	background-color: white;
+	padding: 10px 15px;
+	font-size: 25px;
+	font-family: 'Museo Sans 900', serif;
+	color: #00738a;
+	margin: 0 auto 15px;
+	text-transform: uppercase;
+	width: 275px;
+	max-width: 100%;
+}
+.container-merci .bt-don {
+	display: block;
+	background-image: url("https://heroku-adfinitas-campaign.s3.amazonaws.com/VLM-2019/19-plaidoyer-CRCM/bg-button.jpg");
+	background-size: cover;
+	padding: 10px 15px;
+	font-size: 25px;
+	font-family: 'Museo Sans 900', serif;
+	color: #00738a;
+	margin: 15% auto 15px;
+	text-transform: uppercase;
+	width: 275px;
+	max-width: 100%;
+	position: relative;
+}
+.container-merci .bt-don img {
+	position: absolute;
+	top: -30px;
+	left: -35px;
+}
+.container-merci .bt-social * {
+	vertical-align: sub;
+}
 .container-right {
 	background-color: #00738a;
 	position: relative;
@@ -377,14 +465,32 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 	padding-top: 20px;
 	top: 0;
 }
-.container-form .title {
+.container-merci .title {
+	margin-bottom: 50px;
+}
+.container-merci p.text {
+	margin: 20px auto 0;
+	width: 250px;
+	max-width: 100%;
+	text-align: left;
+	color: white;
+	font-family: 'Museo Sans 300', serif;
+	font-size: 15px;
+	line-height: 1.2;
+}
+.container-merci p .bold {
+	font-family: 'Museo Sans 700', serif;
+}
+.container-form .title,
+.container-merci .title{
 	width: 100%;
 	text-align: center;
 	height: 65px;
 	background-image: url("https://heroku-adfinitas-campaign.s3.amazonaws.com/VLM-2019/19-plaidoyer-CRCM/bg-button.jpg");
 	background-size: cover;
 }
-.container-form .title p {
+.container-form .title p,
+.container-merci .title p{
 	margin-top: 40px;
 	color: #00738a;
 	font-size: 23px;
@@ -430,6 +536,15 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 	border-bottom: 1px solid white;
 	padding-bottom: 30px;
 	margin-bottom: 20px;
+}
+.container-form form input.red-border {
+	border: 1px solid red;
+}
+.error {
+	font-size: 12px !important;
+	color: #FFDF00 !important;
+	display: none;
+	margin-bottom: 5px !important;
 }
 .container-form form .group div:nth-child(1) {
 	width: 49%;
@@ -485,6 +600,57 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 	font-size: 14px;
 	line-height: 1.2;
 	margin-left: 8px;
+}
+
+.container-merci .container-virade {
+	background-color: #e6f1f4;
+	min-height: 215px;
+	padding-top: 60px;
+	width: 100%;
+	position: absolute;
+	bottom: 40px;
+}
+
+.container-merci .container-virade a {
+	background-color: #de4443;
+	display: block;
+	font-size: 25px;
+	font-family: 'Museo Sans 900', serif;
+	color: white;
+	text-transform: uppercase;
+	height: 85px;
+	line-height: 1.2;
+	padding-top: 10px;
+	text-align: left;
+	max-width: 100%;
+	width: 350px;
+	margin: 0 auto;
+}
+.container-merci .container-virade a span {
+	line-height: 1;
+
+}
+.container-merci .container-virade a img {
+	vertical-align: middle;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 50px;
+}
+
+#merci .container-footer {
+	display: none;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 40px;
+	background-color: #00738a;
+}
+#merci .container-footer p {
+	font-size: 14px;
+	color: white;
+	font-family: 'Museo Sans 300', serif;
+	margin: 9px 0 0 20px;
 }
 @media screen and (max-height: 830px) {
 	.container-form {
@@ -629,9 +795,39 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 		font-size: 24px !important;
 	}
 
+	.container-merci .container-virade a {
+		font-size: 22px;
+		padding-top: 16px;
+	}
+	#merci .container-virades .inner .text p.big {
+		font-size: 24px;
+		margin-top: 10px;
+	}
+	#merci .container-virades .inner .baloon3 {
+		top: 20px;
+		bottom: auto;
+	}
+	#merci .container-virades .inner .baloon2 {
+		display: none;
+	}
+	#merci .container-virades .inner .baloon1 {
+		bottom: auto;
+		top: 0;
+	}
+	.container-merci .container-virade {
+		padding: 5px;
+		padding-top: 60px;
+	}
+
 
 }
 @media screen and (max-width: 640px) {
+	#merci {
+		display: none !important;
+	}
+	#box-1 h1, #box-1 h1 span.big {
+		font-size: 22px;
+	}
 	#body {
 		height: 2980px;
 		padding-top: 70px;
@@ -705,5 +901,26 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 	}
 	.container-form form input {
 		margin-bottom: 8px;
+	}
+
+	.container-merci > img {
+		margin-bottom: 10px;
+	}
+	.container-right {
+		padding-top: 20px;
+		padding-bottom: 190px !important;
+	}
+	.container-merci .container-virade a {
+		font-size: 19px;
+		height: 80px;
+	}
+	.container-merci .container-virade a img {
+		margin-right: 10px;
+		margin-left: 7px;
+	}
+	.container-merci .container-virade {
+		bottom: 0;
+		padding: 40px 18px 18px !important;
+		min-height: 154px;
 	}
 }
