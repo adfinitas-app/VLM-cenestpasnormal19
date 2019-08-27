@@ -80,9 +80,15 @@ $('#closeForm').click( function (e) {
 $('form').submit( function (e) {
     e.preventDefault();
     if (validateForm()) {
-
         addVote()
         merci = true
+
+        var CountRef = firebase.database().ref('count');
+
+        CountRef.once('value', function(snapshot) {
+            sendData(snapshot.val())
+        });
+
 
         $('.container-right').css({'min-height':'100vh', 'height':'auto','padding-bottom':'220px'});
         $('.container-form').fadeOut('slow', function () {

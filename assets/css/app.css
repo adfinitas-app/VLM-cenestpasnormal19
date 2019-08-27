@@ -96,7 +96,7 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 	height: 2300px;
 	padding-top: 120px;
 	background-image: url("https://heroku-adfinitas-campaign.s3.amazonaws.com/VLM-2019/19-plaidoyer-CRCM/bg-degrade.jpg");
-	background-size: cover;
+	background-size: contain;
 	background-position: center;
 	background-attachment: fixed;
 	position: relative;

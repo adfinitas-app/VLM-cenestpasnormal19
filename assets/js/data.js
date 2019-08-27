@@ -1,58 +1,19 @@
-function sendData() {
+function sendData(nb) {
     var data = {
         "db": {
-            "schema": "faf_cannes_2018",
+            "schema": "plaidoyer-crcm2019",
             "db": {
                 "email": pureField($('#f_email').val()),
                 "phone": pureField(getPhone()),
                 "firstname": pureField($('#f_firstname').val().toUpperCase()),
                 "lastname": pureField($('#f_lastname').val().toUpperCase()),
-                "civility": getCivility(),
-                "sexe": getSexe(),
-                "name":  pureField($('#f_firstname').val()) + " " + pureField($('#f_lastname').val()),
-                "language": "fr_FR",
+                "numero_signataire": nb,
+                "date_signature": getTodayDate()
             }
-        },
-        "woopra": {
-            "host": "aveuglesdefrance.org",			// Nom du projet dans Woopra.
-
-            /* Variables de configuration de la fiche utilisateur, préfixe : "cv_" */
-
-            "cv_email": pureField($('#f_email').val()),
-            "cv_firstname": pureField($('#f_firstname').val().toUpperCase()),
-            "cv_lastname": pureField($('#f_lastname').val().toUpperCase()),
-            "cv_sexe": getSexe(),
-            "cv_civility": getCivility(),
-            "cv_name":  pureField($('#f_firstname').val()) + " " + pureField($('#f_lastname').val()),
-
-            /* Variables de l'événement, : préfixe : "ce_" */
-
-            "event": "cannes_2018",				// Nom de l'événement à tracker si applicable. Non préfixé.
-        },
-        "mailjet": {
-            "Email": pureField($('#f_email').val()),
-            "Properties": {
-                "firstname": pureField($('#f_firstname').val().toUpperCase()),
-                "lastname": pureField($('#f_lastname').val().toUpperCase()),
-                "sexe": getSexe(),
-                "civility": getCivility(),
-                "civility_dear": getCivilityDear(),
-                "civility_long": getCivilityLong(),
-                "personnalisation": getPersonnalisation(),
-                "personnalisation_courte": getPersonnalisationCourte(),
-                "name": pureField($('#f_firstname').val()) + " " + pureField($('#f_lastname').val()),
-                "language": "fr_FR",
-            },
-            "addLists": getList(), // Noms de transmission des listes dans lesquelles ajouter le contact. Ne pas mettre les listes "Toute la base" et "Prospects" ici, le contact y est inséré par défaut (excepté dans "Prospect" si donateur).
-            "delLists": []  // Noms de transmission des listes dans lesquelles supprimer le contact.
         }
     };
-    if (pureField(getPhone()) != ""){
-        data.woopra["cv_phone"] = pureField(getPhone());
-        data.woopra["ce_phone"] = pureField(getPhone());
-    }
-    //console.log(data);
-    makeCorsRequest(data);
+    console.log(data);
+    //makeCorsRequest(data);
 }
 
 
