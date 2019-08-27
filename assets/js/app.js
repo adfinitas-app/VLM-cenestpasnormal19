@@ -7,6 +7,13 @@ $(document).ready(function() {
         initialCountry: "fr"
     });
 
+
+    var CountRef = firebase.database().ref('count');
+
+    CountRef.once('value', function(snapshot) {
+        $('#nb-sign span').html(snapshot.val());
+    });
+
     fillFieldsFromUrl()
 
     if ($(window).width() > 1010 && !merci) {
@@ -19,8 +26,25 @@ $(document).ready(function() {
 
 });
 
+function addVote() {
+    var CountRef = firebase.database().ref('count');
+
+    CountRef.once('value', function(snapshot) {
+        $('#nb-sign span').html(snapshot.val() + 1);
+        firebase.database().ref('count').set(snapshot.val() + 1);
+    });
+
+}
+
 $(window)
     .scroll( function() {
+        if (($(window).width() < 1010) &&  (($(window).scrollTop() + $(window).innerHeight() + 20) >= $(document).innerHeight())) {
+            $('#closeForm').fadeIn();
+            $('.container-form').animate({
+                top: 0
+            }, 500, function() {
+            });
+        }
     })
     .resize( function () {
         if ($(window).width() > 1010 && !merci) {
@@ -56,7 +80,11 @@ $('#closeForm').click( function (e) {
 $('form').submit( function (e) {
     e.preventDefault();
     if (validateForm()) {
-        $('.container-right').css({'min-height':'100vh', 'height':'auto','padding-bottom':'270px'});
+
+        addVote()
+        merci = true
+
+        $('.container-right').css({'min-height':'100vh', 'height':'auto','padding-bottom':'220px'});
         $('.container-form').fadeOut('slow', function () {
 
         })
@@ -68,12 +96,13 @@ $('form').submit( function (e) {
         $('.container-deploy-form').fadeOut('slow', function () {
         });
         $('.container-merci').fadeIn('slow', function () {
-            $('#merci .container-virades').css('bottom', '40px')
+
         })
-        $('.petition').slideUp(function () {
+        $('#merci').css('min-height', $('.container-right').height() + 250)
+        $('#body').slideUp(function () {
             $(this).hide()
         })
-        $('#body').slideUp(function () {
+        $('.petition').slideUp(function () {
             $(this).hide()
         })
         $('#merci').slideDown()
