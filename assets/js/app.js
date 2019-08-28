@@ -12,6 +12,7 @@ $(document).ready(function() {
 
     CountRef.once('value', function(snapshot) {
         $('#nb-sign span').html(snapshot.val());
+        $('#nb-sign').css('visibility','visible')
     });
 
     fillFieldsFromUrl()
@@ -96,7 +97,7 @@ $('form').submit( function (e) {
         })
         $('.container-left').addClass('medium-7')
         $('.container-right').addClass('medium-5')
-        $('#merci .container-footer').fadeIn('slow', function () {
+        $('.container-footer').fadeIn('slow', function () {
 
         })
         $('.container-deploy-form').fadeOut('slow', function () {
