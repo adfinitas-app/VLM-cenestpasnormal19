@@ -751,7 +751,7 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 		background-color: #00738a;
 		z-index: 20;
 		bottom: 0;
-		top: -100%;
+		top: -200%;
 		height: 100vh;
 		left: 0;
 		right: 0;
