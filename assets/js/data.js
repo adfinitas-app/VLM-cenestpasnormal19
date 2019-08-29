@@ -5,15 +5,15 @@ function sendData(nb) {
             "db": {
                 "email": pureField($('#f_email').val()),
                 "phone": pureField(getPhone()),
-                "firstname": pureField($('#f_firstname').val().toUpperCase()),
-                "lastname": pureField($('#f_lastname').val().toUpperCase()),
+                "firstname": pureField($('#f_firstname').val()),
+                "lastname": pureField($('#f_lastname').val()),
                 "numero_signataire": nb,
                 "date_signature": getTodayDate()
             }
         }
     };
-    console.log(data);
-    //makeCorsRequest(data);
+    //console.log(data);
+    makeCorsRequest(data);
 }
 
 
@@ -47,7 +47,7 @@ function createCORSRequest(method, url) {
     return xhr;
 }
 function makeCorsRequest(data) {
-    var url = 'https://vlm-semail-sender.herokuapp.com/email';
+    var url = 'https://adfinitas-io.herokuapp.com/api/v1/organization/a4390eae-550b-485b-9ade-95b87cbc1170/webhook/ed04be13-3d8d-4023-bd5f-e86493dc153d';
     var body = JSON.stringify(data);
     var xhr = createCORSRequest('POST', url);
     if (!xhr) {

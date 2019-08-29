@@ -9,7 +9,14 @@
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 	.iti-flag {background-image: url("../img/flags@2x.png");}
 }
+@font-face {
+	font-family: 'Museo Sans 700';
+	src: url('../fonts/museosans_700-webfont.woff2') format('woff2'),
+	url('../fonts/museosans_700-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
 
+}
 @font-face {
 	font-family: 'Museo Sans 500';
 	src: url('../fonts/museosans_500-webfont.woff2') format('woff2'),
@@ -18,10 +25,6 @@
 	font-style: normal;
 
 }
-
-
-
-
 @font-face {
 	font-family: 'Museo Sans 300';
 	src: url('../fonts/museosans300-webfont.woff2') format('woff2'),
@@ -86,7 +89,7 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 #body {
 	height: 2300px;
 	padding-top: 120px;
-	background-image: url("https://heroku-adfinitas-campaign.s3.amazonaws.com/VLM-2019/19-plaidoyer-CRCM/bg-degrade.jpg");
+	background-image: url("https://heroku-adfinitas-campaign.s3.amazonaws.com/VLM-2019/19-plaidoyer-CRCM/d%C3%A9grad%C3%A9+1499+2010px_V2.png");
 	background-size: contain;
 	background-position: center;
 	background-attachment: fixed;
@@ -94,7 +97,7 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 }
 
 #body .logo {
-	position: absolute;
+	position: fixed;
 	left: 15px;
 	top: 15px;
 }
@@ -136,8 +139,7 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 	color: #efcd61;
 	font-size: 25px;
 	line-height: 1.2;
-	font-family: 'Museo Sans 500', serif;
-	font-weight: bold;
+	font-family: 'Museo Sans 700', serif;
 	padding-top: 60px;
 }
 #box-1 h1 span.white {
@@ -205,8 +207,7 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 	font-family: 'Museo Sans 300', serif;
 }
 #box-3 p span.bold {
-	font-family: 'Museo Sans 500', serif;
-	font-weight: bold;
+	font-family: 'Museo Sans 700', serif;
 
 }
 
@@ -230,8 +231,7 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 	color: #efcd61;
 	font-size: 40px;
 	line-height: 1.2;
-	font-family: 'Museo Sans 500', serif;
-	font-weight: bold;
+	font-family: 'Museo Sans 700', serif;
 }
 #box-5 {
 	left: -300px;
@@ -240,8 +240,7 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 	font-family: 'Museo Sans 500', serif;
 }
 #box-5 .bold {
-	font-family: 'Museo Sans 900', serif !important;
-	font-weight: bold;
+	font-family: 'Museo Sans 700', serif !important;
 }
 #box-5 .inner.second {
 	width: 730px;
@@ -252,8 +251,7 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 #box-5 .title {
 	color: black;
 	font-size: 20px;
-	font-family: 'Museo Sans 900', serif;
-	font-weight: bold;
+	font-family: 'Museo Sans 700', serif;
 	line-height: 1;
 	margin-top: 15px;
 	margin-bottom: 5px;
@@ -285,7 +283,7 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 	color: white;
 	font-size: 24px;
 	line-height: 1.2;
-	font-family: 'Museo Sans 900', serif;
+	font-family: 'Museo Sans 700', serif;
 	font-weight: bold;
 }
 
@@ -320,6 +318,7 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 	padding: 50px 100px;
 	font-family: 'Museo Sans 500', serif;
 	font-size: 18px;
+	position: relative;
 	color: black;
 	line-height: 1.2;
 }
@@ -340,23 +339,20 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 	color: #008e7f;
 }
 .petition .big {
-	font-family: 'Museo Sans 500', serif;
-	font-weight: bold;
+	font-family: 'Museo Sans 700', serif;
 	font-size: 26px;
 	font-style: italic;
 	line-height: 1;
 	margin-bottom: 40px;
 }
 .petition .bold {
-	font-family: 'Museo Sans 500', serif;
-	font-weight: bold;
+	font-family: 'Museo Sans 700', serif;
 
 }
 .petition .title {
 	color: black;
 	font-size: 20px;
-	font-family: 'Museo Sans 500', serif;
-	font-weight: bold;
+	font-family: 'Museo Sans 700', serif;
 
 	line-height: 1;
 	margin-top: 15px;
@@ -389,7 +385,6 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 	background-color: #eaebed;
 }
 #merci .container-virades .inner {
-	overflow-x: hidden;
 	padding-top: 30px;
 	width: 100%;
 	min-height: 215px;
@@ -408,7 +403,8 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 }
 #merci .container-virades .inner .baloon3 {
 	position: absolute;
-	right: -25px;
+	right: -20px;
+	z-index: 30;
 	bottom: 20px;
 }
 #merci .container-virades .inner .text p.big {
@@ -418,8 +414,7 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 	padding: 5px 10px;
 	color: white;
 	font-size: 24px;
-	font-family: 'Museo Sans 500', serif;
-	font-weight: bold;
+	font-family: 'Museo Sans 700', serif;
 
 }
 #merci .container-virades .inner .text p {
@@ -440,8 +435,7 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 	background-color: white;
 	padding: 10px 15px;
 	font-size: 25px;
-	font-family: 'Museo Sans 500', serif;
-	font-weight: bold;
+	font-family: 'Museo Sans 700', serif;
 
 	color: #00738a;
 	margin: 0 auto 15px;
@@ -455,8 +449,7 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 	background-size: cover;
 	padding: 10px 15px;
 	font-size: 25px;
-	font-family: 'Museo Sans 500', serif;
-	font-weight: bold;
+	font-family: 'Museo Sans 700', serif;
 
 	color: #00738a;
 	margin: 15% auto 15px;
@@ -516,8 +509,7 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 	font-size: 23px;
 	line-height: 1.2;
 	margin-bottom: 0;
-	font-family: 'Museo Sans 500', serif;
-	font-weight: bold;
+	font-family: 'Museo Sans 700', serif;
 
 	padding-top: 18px;
 }
@@ -528,8 +520,7 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 	font-size: 20px;
 	line-height: 1.2;
 	margin-bottom: 20px;
-	font-family: 'Museo Sans 500', serif;
-	font-weight: bold;
+	font-family: 'Museo Sans 700', serif;
 
 }
 .container-form .text p {
@@ -540,8 +531,7 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 }
 .container-form .text p.white {
 	color: white;
-	font-family: 'Museo Sans 500', serif;
-	font-weight: bold;
+	font-family: 'Museo Sans 700', serif;
 
 	font-size: 15px;
 	line-height: 1.2;
@@ -604,8 +594,7 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 	color: #00738a;
 	font-size: 18px;
 	line-height: 1.2;
-	font-family: 'Museo Sans 500', serif;
-	font-weight: bold;
+	font-family: 'Museo Sans 700', serif;
 
 	text-transform: uppercase;
 	border-radius: 3px;
@@ -632,7 +621,7 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 }
 
 .container-merci .container-virade {
-	background-color: #e6f1f4;
+	background-color: #eaebed;
 	min-height: 215px;
 	padding-top: 60px;
 	width: 100%;
@@ -644,8 +633,7 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 	background-color: #de4443;
 	display: block;
 	font-size: 25px;
-	font-family: 'Museo Sans 500', serif;
-	font-weight: bold;
+	font-family: 'Museo Sans 700', serif;
 
 	color: white;
 	text-transform: uppercase;
@@ -727,8 +715,7 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 		font-size: 22px;
 		padding-top: 10px;
 		line-height: 1.2;
-		font-family: 'Museo Sans 500', serif;
-		font-weight: bold;
+		font-family: 'Museo Sans 700', serif;
 
 		text-transform: uppercase;
 	}
@@ -742,8 +729,7 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 		color: #efcd61;
 		font-size: 42px;
 		line-height: 1.2;
-		font-family: 'Museo Sans 500', serif;
-		font-weight: bold;
+		font-family: 'Museo Sans 700', serif;
 
 	}
 	.container-form {
@@ -887,6 +873,9 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 	}
 }
 @media screen and (max-width: 640px) {
+	#body .logo {
+		position: absolute;;
+	}
 	#merci {
 		display: none !important;
 	}

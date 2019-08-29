@@ -39,7 +39,7 @@ function addVote() {
 
 $(window)
     .scroll( function() {
-        if (($(window).width() < 1010) &&  (($(window).scrollTop() + $(window).innerHeight() + 20) >= $(document).innerHeight())) {
+        if (($(window).width() < 1010) &&  (($(window).scrollTop() + $(window).innerHeight() + 1) >= $(document).innerHeight())) {
             $('#closeForm').fadeIn();
             $('.container-form').animate({
                 top: 0
