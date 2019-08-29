@@ -71,7 +71,7 @@ $('#closeForm').click( function (e) {
     e.preventDefault()
     $(this).fadeOut();
     $('.container-form').animate({
-        top: '-100%'
+        top: '-200%'
     }, 500, function() {
         // Animation complete.
     });
