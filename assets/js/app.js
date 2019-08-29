@@ -22,6 +22,7 @@ $(document).ready(function() {
             $('#body').height() + $('#petition').height() + 220
         )
     }
+    $('#tag2').css('right',$('.container-right').width())
 
     preload(["https://heroku-adfinitas-campaign.s3.amazonaws.com/VLM-2019/19-plaidoyer-CRCM/merci.jpg"])
 
@@ -53,7 +54,9 @@ $(window)
                 $('#body').height() + $('#petition').height() + 220
             )
         }
-})
+        $('#tag2').css('right',$('.container-right').width())
+
+    })
 
 $('#arrow-container').click( function () {
    scrollTo($('#petition'))

@@ -102,15 +102,15 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 	top: 15px;
 }
 
-#tag1 {
-	position: absolute;
-	right: -15px;
-	top: 40%;
-}
 #tag2 {
-	position: absolute;
-	right: 0;
-	bottom: 5%;
+	position: fixed;
+	right: 33.3%;
+	top: 30px;
+}
+#tag1 {
+	position: fixed;
+	left: 0;
+	bottom: 30px;
 }
 
 .box {
@@ -321,6 +321,7 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 	position: relative;
 	color: black;
 	line-height: 1.2;
+	background-color: white;
 }
 .petition div:nth-child(1) {
 	height: 250px;
@@ -752,10 +753,9 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 
 	#tag1 {
 		right: 0;
-		top: 35%;
-	}
-	#tag2 {
-		bottom: 0;
+		left: auto;
+		top: auto;
+		top: 85px;
 	}
 	#trait-1 {
 		left: 50%;
