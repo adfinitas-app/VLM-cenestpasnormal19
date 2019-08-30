@@ -90,8 +90,9 @@ $('form').submit( function (e) {
         var CountRef = firebase.database().ref('count');
 
         CountRef.once('value', function(snapshot) {
-            sendData(snapshot.val())
+            //sendData(snapshot.val())
         });
+
 
 
         $('.container-right').css({'min-height':'100vh', 'height':'auto','padding-bottom':'220px'});

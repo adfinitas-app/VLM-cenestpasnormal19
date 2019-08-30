@@ -69,6 +69,9 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 .yellow {
 	color: #efcd61;
 }
+.orange {
+	color: #ebab33;
+}
 .fullWidth {
 	width: 100%;
 }
@@ -656,6 +659,20 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 	margin-right: 10px;
 	margin-bottom: 50px;
 }
+#merci .container-text-merci {
+	text-align: center;
+	max-width: 100%;
+	width: 210px;
+	margin-left: auto;
+	padding-top: 35%;
+	margin-right: 15%;
+}
+#merci .container-text-merci p {
+	color: white;
+	font-size: 52px;
+	font-family: 'Museo Sans 700', serif;
+	font-weight: bold;
+}
 
 .container-footer {
 	display: none;
@@ -862,6 +879,14 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 		font-size: 12px;
 	}
 
+	#merci .container-text-merci {
+		padding-top: 60%;
+		margin-right: 7%;
+	}
+	#merci .container-text-merci p {
+		font-size: 52px;
+	}
+
 
 }
 @media screen and (max-width: 1200px) {
@@ -972,6 +997,12 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 		padding-bottom: 150px !important;
 		padding-top: 20px;
 	}
+	.container-merci .title p span{
+		display: none;
+	}
+	.container-merci .title p:after {
+		content: 'MERCI !';
+	}
 	.container-merci > a {
 		display: block;
 		margin: 0 auto 10px;
@@ -988,5 +1019,8 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 		bottom: 0;
 		padding: 40px 18px 18px !important;
 		min-height: 154px;
+	}
+	#merci .container-text-merci {
+		display: none;
 	}
 }
