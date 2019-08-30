@@ -90,7 +90,7 @@ $('form').submit( function (e) {
         var CountRef = firebase.database().ref('count');
 
         CountRef.once('value', function(snapshot) {
-            //sendData(snapshot.val())
+            sendData(snapshot.val())
         });
 
 
