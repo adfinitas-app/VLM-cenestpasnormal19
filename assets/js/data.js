@@ -1,7 +1,7 @@
 function sendData(nb) {
     var data = {
         "db": {
-            "schema": "plaidoyer-crcm2019",
+            "schema": "vlm_plaidoyer1",
             "db": {
                 "email": pureField($('#f_email').val()),
                 "phone": pureField(getPhone()),
