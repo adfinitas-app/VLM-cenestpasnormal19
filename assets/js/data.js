@@ -9,6 +9,9 @@ function sendData(nb) {
                 "lastname": pureField($('#f_lastname').val()),
                 "numero_signataire": nb,
                 "date_signature": getTodayDate()
+                "code_operation": "plaidoyer-crcm2019"
+
+
             }
         }
     };
