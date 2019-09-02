@@ -8,7 +8,7 @@ function sendData(nb) {
                 "firstname": pureField($('#f_firstname').val()),
                 "lastname": pureField($('#f_lastname').val()),
                 "numero_signataire": nb,
-                "date_signature": getTodayDate()
+                "date_signature": getTodayDate(),
                 "code_operation": "plaidoyer-crcm2019"
 
 
