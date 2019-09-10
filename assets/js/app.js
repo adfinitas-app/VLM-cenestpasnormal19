@@ -1,4 +1,4 @@
-var merci = false;
+var merci = false
 
 $(document).foundation();
 $(document).ready(function() {
@@ -6,7 +6,11 @@ $(document).ready(function() {
         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.13/js/utils.js",
         initialCountry: "fr"
     });
-
+    if ($(window).width() > 1010 && !merci) {
+        $('.container-right').height(
+            $('#body').height() + $('#petition').height() + 220
+        )
+    }
 
     var CountRef = firebase.database().ref('count');
 
@@ -17,11 +21,7 @@ $(document).ready(function() {
 
     fillFieldsFromUrl()
 
-    if ($(window).width() > 1010 && !merci) {
-        $('.container-right').height(
-            $('#body').height() + $('#petition').height() + 220
-        )
-    }
+
     $('#tag2').css('right',$('.container-right').width())
 
     preload(["https://heroku-adfinitas-campaign.s3.amazonaws.com/VLM-2019/19-plaidoyer-CRCM/merci.jpg"])
@@ -85,7 +85,6 @@ $('form').submit( function (e) {
     e.preventDefault();
     if (validateForm()) {
         addVote()
-        merci = true
 
         var CountRef = firebase.database().ref('count');
 
@@ -94,7 +93,9 @@ $('form').submit( function (e) {
         });
 
 
-
+        merci = true
+        $('body').append('<!-- CONVERSION TAG --><script type="text/javascript" src="https://cstatic.weborama.fr/js/advertiserv2/adperf_conversion.js"></script>' +
+            '<script type="text/javascript">var adperftrackobj = {fullhost : \'vaincrelamucoviscidose.solution.weborama.fr\',site : 2318,conversion_page : 10};try{adperfTracker.track( adperftrackobj );}catch(err){}</script>')
         $('.container-right').css({'min-height':'100vh', 'height':'auto','padding-bottom':'220px'});
         $('.container-form').fadeOut('slow', function () {
 
@@ -124,18 +125,17 @@ $('form').submit( function (e) {
 
 function validateForm() {
     var check = true;
-    var el = $('form');
 
 
     $('.error').hide();
-    el.find('input').each( function() {
+    $('form input').each( function() {
         $(this).removeClass('red-border');
     });
 
-    var phone = el.find('input[name=f_phone]');
-    var firstname = el.find('input[name=f_firstname]');
-    var lastname = el.find('input[name=f_lastname]');
-    var email = el.find('input[name=f_email]');
+    var phone = $('form input[name=f_phone]');
+    var firstname = $('form input[name=f_firstname]');
+    var lastname = $('form input[name=f_lastname]');
+    var email = $('form input[name=f_email]');
 
 
     if (phone.val() !== "") {
