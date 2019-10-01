@@ -15,7 +15,7 @@
 	url('../fonts/museosans_700-webfont.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
-
+me
 }
 @font-face {
 	font-family: 'Museo Sans 500';
@@ -383,7 +383,7 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 	display: none;
 }
 #merci .container-virades {
-	display: block;
+	display: none !important;
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -628,6 +628,7 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 }
 
 .container-merci .container-virade {
+    display: none !important;
 	background-color: #eaebed;
 	min-height: 215px;
 	padding-top: 60px;
