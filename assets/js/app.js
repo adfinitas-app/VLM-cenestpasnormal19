@@ -110,7 +110,7 @@ $('form').submit( function (e) {
         $('.container-merci').fadeIn('slow', function () {
 
         })
-        $('#merci').css('min-height', $('.container-right').height() + 250)
+        $('#merci').css('min-height', $('.container-right').height() + 370)
         $('#body').slideUp(function () {
             $(this).hide()
         })
