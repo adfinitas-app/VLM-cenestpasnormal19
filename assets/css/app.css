@@ -998,7 +998,7 @@ p, a, h1, h2, h3, h4, h5, h6, button {
 		margin-bottom: 8px;
 	}
 	.container-right {
-		padding-bottom: 150px !important;
+		padding-bottom: 0 !important;
 		padding-top: 20px;
 	}
 	.container-merci .title p span{
